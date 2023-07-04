@@ -1,0 +1,63 @@
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 400:Plugin executed on: 'darwin'
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 401:Plugin executed with python version: '3.9.13 (v3.9.13:6de2ca5339, May 17 2022, 11:37:23) \n[Clang 13.0.0 (clang-1300.0.29.30)]'
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 402:KiCad build version: 7.0.2-0
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 403:Plugin version: 2.1.0
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 404:Frame repr: <wx._core.Frame object at 0x11d1bc550>
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 428:Preparing replicator with U3 as a reference
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.replicate_layout 116:getting a list of all footprints on board
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 476:source anchor footprint is 'U3'
+Located on: ['LED2']
+With filenames: ['led.kicad_sch']
+With sheet_id:['LED2']
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 483:Corresponding footprints are 
+[('U3', ['LED2']), ('U2', ['LED1']), ('U1', ['LED0'])]
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 495:Showing dialog
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.replicate_layout 403:constructing a list of sheets suitable for replication on level:'LED2', file:'led.kicad_sch'
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.replicate_layout 440:suitable sheets are:[['LED0'], ['LED1']]
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1411:Level selected: ['LED2']
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1246:Filtering list of tracks
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 501:Toolbar position: wx.Point(1478, 100)
+07-02 19:20:55 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 506:Dialog position: wx.Point(1116, 100)
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 403:constructing a list of sheets suitable for replication on level:'LED2', file:'led.kicad_sch'
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 440:suitable sheets are:[['LED0'], ['LED1']]
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 248:Replicating layout
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 239:Starting replication of sheets: [['LED0'], ['LED1']]
+on level: ['LED2']
+with tracks=True, zone=True, text=True, text=True, intersecting=False, remove=False, locked footprints=False, group_only=False
+07-02 19:20:58 root 340:updating GUI message: 'Preparing for replication'
+07-02 19:20:58 root 345:updating GUI with: 0
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 309:Getting the list of source footprints
+07-02 19:20:58 root 345:updating GUI with: 0
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 319:Getting the list of all the remaining footprints
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 326:Getting source tracks
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1246:Filtering list of tracks
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 330:Getting source zones
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 334:Getting source text items
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 338:Getting source drawing items
+07-02 19:20:58 root 340:updating GUI message: 'Replicating footprints'
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 754:Replicating footprints
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 761:Replicating footprints on sheet ['LED0']
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 761:Replicating footprints on sheet ['LED1']
+07-02 19:20:58 root 340:updating GUI message: 'Replicating tracks'
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 924:Replicating tracks
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 930:Replicating tracks on sheet ['LED0']
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 749:Net pairs for sheet ['LED0'] :[('Net-(Q7-G)', 'Net-(Q1-G)'), ('Net-(Q9-D)', 'Net-(Q3-D)'), ('+12V', '+12V'), ('/LED2/R_CTRL', '/LED0/R_CTRL'), ('/LED2/G_CTRL', '/LED0/G_CTRL'), ('', ''), ('Net-(Q8-D)', 'Net-(Q2-D)'), ('Net-(Q8-G)', 'Net-(Q2-G)'), ('Net-(Q7-D)', 'Net-(Q1-D)'), ('Net-(Q9-G)', 'Net-(Q3-G)'), ('/LED2/R_OUT', '/LED0/R_OUT'), ('Net-(J4-Pin_4)', 'Net-(J1-Pin_4)'), ('/LED2/B_CTRL', '/LED0/B_CTRL'), ('GND', 'GND'), ('/LED2/B_OUT', '/LED0/B_OUT'), ('/LED2/G_OUT', '/LED0/G_OUT')]
+07-02 19:20:58 root 345:updating GUI with: 2
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 930:Replicating tracks on sheet ['LED1']
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 749:Net pairs for sheet ['LED1'] :[('Net-(Q8-G)', 'Net-(Q5-G)'), ('Net-(Q8-D)', 'Net-(Q5-D)'), ('+12V', '+12V'), ('Net-(Q9-G)', 'Net-(Q6-G)'), ('', ''), ('/LED2/B_CTRL', '/LED1/B_CTRL'), ('/LED2/B_OUT', '/LED1/B_OUT'), ('/LED2/G_CTRL', '/LED1/G_CTRL'), ('/LED2/R_CTRL', '/LED1/R_CTRL'), ('/LED2/R_OUT', '/LED1/R_OUT'), ('Net-(J4-Pin_4)', 'Net-(J3-Pin_4)'), ('Net-(Q9-D)', 'Net-(Q6-D)'), ('GND', 'GND'), ('/LED2/G_OUT', '/LED1/G_OUT'), ('Net-(Q7-G)', 'Net-(Q4-G)'), ('Net-(Q7-D)', 'Net-(Q4-D)')]
+07-02 19:20:58 root 340:updating GUI message: 'Replicating zones'
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 994:Replicating zones
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1001:Replicating zones on sheet ['LED0']
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 749:Net pairs for sheet ['LED0'] :[('Net-(Q7-G)', 'Net-(Q1-G)'), ('Net-(Q9-D)', 'Net-(Q3-D)'), ('+12V', '+12V'), ('/LED2/R_CTRL', '/LED0/R_CTRL'), ('/LED2/G_CTRL', '/LED0/G_CTRL'), ('', ''), ('Net-(Q8-D)', 'Net-(Q2-D)'), ('Net-(Q8-G)', 'Net-(Q2-G)'), ('Net-(Q7-D)', 'Net-(Q1-D)'), ('Net-(Q9-G)', 'Net-(Q3-G)'), ('/LED2/R_OUT', '/LED0/R_OUT'), ('Net-(J4-Pin_4)', 'Net-(J1-Pin_4)'), ('/LED2/B_CTRL', '/LED0/B_CTRL'), ('GND', 'GND'), ('/LED2/B_OUT', '/LED0/B_OUT'), ('/LED2/G_OUT', '/LED0/G_OUT')]
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1001:Replicating zones on sheet ['LED1']
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 749:Net pairs for sheet ['LED1'] :[('Net-(Q8-G)', 'Net-(Q5-G)'), ('Net-(Q8-D)', 'Net-(Q5-D)'), ('+12V', '+12V'), ('Net-(Q9-G)', 'Net-(Q6-G)'), ('', ''), ('/LED2/B_CTRL', '/LED1/B_CTRL'), ('/LED2/B_OUT', '/LED1/B_OUT'), ('/LED2/G_CTRL', '/LED1/G_CTRL'), ('/LED2/R_CTRL', '/LED1/R_CTRL'), ('/LED2/R_OUT', '/LED1/R_OUT'), ('Net-(J4-Pin_4)', 'Net-(J3-Pin_4)'), ('Net-(Q9-D)', 'Net-(Q6-D)'), ('GND', 'GND'), ('/LED2/G_OUT', '/LED1/G_OUT'), ('Net-(Q7-G)', 'Net-(Q4-G)'), ('Net-(Q7-D)', 'Net-(Q4-D)')]
+07-02 19:20:58 root 340:updating GUI message: 'Replicating text'
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1083:Replicating text
+07-02 19:20:58 root 345:updating GUI with: 0
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1090:Replicating text on sheet ['LED0']
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1090:Replicating text on sheet ['LED1']
+07-02 19:20:58 root 340:updating GUI message: 'Replicating drawings'
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1134:Replicating drawings
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1140:Replicating drawings on sheet ['LED0']
+07-02 19:20:58 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1140:Replicating drawings on sheet ['LED1']
+07-02 19:20:59 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 264:Replication complete
