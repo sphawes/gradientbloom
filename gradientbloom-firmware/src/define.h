@@ -5,14 +5,14 @@
 #define MODE PA7
 #define LED PA8
 
-#define LED0_R PB5
-#define LED0_G PB4
-#define LED0_B PB3
+#define LED0_R PB5  //TIM3_CH2
+#define LED0_G PB4  //TIM3_CH1
+#define LED0_B PB3  //TIM2_CH2
 
-#define LED1_R PA2
-#define LED1_G PA1
-#define LED1_B PB_9
+#define LED1_R PA2  //TIM2_CH3
+#define LED1_G PA11 //TIM1_CH4 
+#define LED1_B PA0  //TIM2_CH1
 
-#define LED2_R PB_11
-#define LED2_G PB_10
-#define LED2_B PA3
+#define LED2_R PB0  //TIM3_CH3
+#define LED2_G PB1  //TIM3_CH4
+#define LED2_B PA3  //TIM2_CH4

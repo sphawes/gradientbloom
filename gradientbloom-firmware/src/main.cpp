@@ -41,13 +41,15 @@ void setup() {
   pinMode(LED2_B, OUTPUT);
 
   pinMode(MODE, INPUT);
-  pinMode(LED, INPUT);
+  pinMode(LED, OUTPUT);
 
 }
 
 void loop() {
   handleModeChange();
   handleLightingExecution();
+
+
 }
 
 // MODE 1 - SPECTRABLOOM
@@ -57,6 +59,8 @@ void spectrabloomCycle(){
   led(0, rPotVal, 0, 0);
   led(1, 0, gPotVal, 0);
   led(2, 0, 0, bPotVal);
+
+  delay(20);
 
 }
 
@@ -89,12 +93,14 @@ void handleLightingExecution(){
 void handleModeChange(){
   // if mode button pressed
   if(digitalRead(MODE)){
+    digitalWrite(LED, HIGH);
     // immediately kill all lights 
     killAllLights();
     // wait for button to come up
-    while(digitalRead(MODE)){
-      // do nothing while waiting to debounce
-    }
+    // while(digitalRead(MODE)){
+    //   // do nothing while waiting to debounce
+    // }
+    digitalWrite(LED, LOW);
     // small delay for debounce
     delay(10);
     // increment mode
@@ -115,37 +121,37 @@ void handleModeChange(){
 }
 
 void killAllLights(){
-  digitalWrite(LED0_R, LOW);
-  digitalWrite(LED0_G, LOW);
-  digitalWrite(LED0_B, LOW);
-  digitalWrite(LED1_R, LOW);
-  digitalWrite(LED1_G, LOW);
-  digitalWrite(LED1_B, LOW);
-  digitalWrite(LED2_R, LOW);
-  digitalWrite(LED2_G, LOW);
-  digitalWrite(LED2_B, LOW);
+  analogWrite(LED0_R, 0);
+  analogWrite(LED0_G, 0);
+  analogWrite(LED0_B, 0);
+  analogWrite(LED1_R, 0);
+  analogWrite(LED1_G, 0);
+  analogWrite(LED1_B, 0);
+  analogWrite(LED2_R, 0);
+  analogWrite(LED2_G, 0);
+  analogWrite(LED2_B, 0);
 }
 
 void led(int index, int red, int green, int blue){
   if(index == 0){
-    analogWrite(LED0_R, red);
-    analogWrite(LED0_G, green);
-    analogWrite(LED0_B, blue);
+    analogWrite(LED0_R, red/3);
+    analogWrite(LED0_G, green/3);
+    analogWrite(LED0_B, blue/3);
   }
   else if(index == 1){
-    analogWrite(LED1_R, red);
-    analogWrite(LED1_G, green);
-    analogWrite(LED1_B, blue);
+    analogWrite(LED1_R, red/3);
+    analogWrite(LED1_G, green/3);
+    analogWrite(LED1_B, blue/3);
   }
   else if(index == 2){
-    analogWrite(LED2_R, red);
-    analogWrite(LED2_G, green);
-    analogWrite(LED2_B, blue);
+    analogWrite(LED2_R, red/3);
+    analogWrite(LED2_G, green/3);
+    analogWrite(LED2_B, blue/3);
   }
 }
 
 void updatePots(){
-  rPotVal = analogRead(R_POT);
-  gPotVal = analogRead(G_POT);
-  bPotVal = analogRead(B_POT);
+  rPotVal = 1028 - analogRead(R_POT);
+  gPotVal = 1028 - analogRead(G_POT);
+  bPotVal = 1028 - analogRead(B_POT);
 }
