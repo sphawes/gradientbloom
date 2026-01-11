@@ -8,12 +8,21 @@ GNU GPL v3
 #include "define.h"
 #include <Arduino.h>
 
-int mode = 1;
+int mode = 0;
 int modeCount = 2;
+
+int rainbowIndex = 0;
+long lastTime;
 
 int rPotVal = 0;
 int gPotVal = 0;
 int bPotVal = 0;
+
+struct color {
+    int red;
+    int green;
+    int blue;
+};
 
 inline void handleModeChange();
 inline void handleLightingExecution();
@@ -43,13 +52,21 @@ void setup() {
   pinMode(MODE, INPUT);
   pinMode(LED, OUTPUT);
 
+  lastTime = millis();
+
 }
 
 void loop() {
   handleModeChange();
   handleLightingExecution();
 
+}
 
+// MODE 0 - OFF
+void offCycle(){
+  led(0, 0, 0, 0);
+  led(1, 0, 0, 0);
+  led(2, 0, 0, 0);
 }
 
 // MODE 1 - SPECTRABLOOM
@@ -74,17 +91,45 @@ void lampCycle(){
   led(2, rPotVal, gPotVal, bPotVal);
 }
 
+// MODE 3 - Rainbow
+// RPot controls speed, GPot controls difference between colors, 
+void rainbowCycle(){
+
+  updatePots();
+
+  if(millis() > lastTime + rPotVal){
+    // it's time to increment the rainbow
+
+    led(0, rainbowIndex, rainbowIndex + gOffset, rainbowIndex + bOffset);
+
+    // update the last time
+    lastTime = millis();
+
+    // update the rainbow index
+
+
+  }
+
+
+}
+
 void handleLightingExecution(){
   switch(mode) {
+    case 0:
+      offCycle();
+      break;
     case 1:
       spectrabloomCycle();
       break;
     case 2:
       lampCycle();
       break;
+    case 3:
+      rainbowCycle();
+      break;
     default:
-      // something weird is happening, reset mode to 1 to get to known state
-      mode = 1;
+      // something weird is happening, reset mode to 0 to get to known state
+      mode = 0;
       break;
   }
 }
@@ -105,7 +150,7 @@ void handleModeChange(){
     delay(10);
     // increment mode
     if(mode >= modeCount){
-      mode = 1;
+      mode = 0;
     }
     else{
       mode++;
@@ -154,4 +199,24 @@ void updatePots(){
   rPotVal = 1028 - analogRead(R_POT);
   gPotVal = 1028 - analogRead(G_POT);
   bPotVal = 1028 - analogRead(B_POT);
+}
+
+color indexToColor(int index){
+
+  int fractionalIndex = index % 1028;
+  color result;
+
+// 342
+
+  if(fractionalIndex < 342){
+    result.red = ;
+
+  }
+  else if(fractionalIndex < 684){
+    result.red = 0;
+  }
+  else{
+
+  }
+
 }
